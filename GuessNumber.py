@@ -14,12 +14,14 @@ comp_num = random.randint(1,20)         # Computer generates random number
 guess_num = input("Guess random number between 1 and 20:  ")          # User guesses and inputs random number
 guess_num = int(guess_num)
                            
-for num in comp_num:                 # If the user-guessed number, say x, is higher or lower than num,
-    if guess_num > num:
-        print("Your guess is too High!")
-    elif guess_num < num:
-        print("Your guess is too Low!")                           # print "Your Guess is too High" or "Your Guess is too Low" respectively
-    elif guess_num == num:
-        print("You guessed just right, that's the number!")
-    else:
-        print("Your guess is out of the game range :(")
+# for num in comp_num:                 # If the user-guessed number, say x, is higher or lower than num,
+if guess_num > comp_num and guess_num < 20:
+    print("Your guess is too High!")
+elif guess_num < comp_num and guess_num > 1:
+    print("Your guess is too Low!")                           # print "Your Guess is too High" or "Your Guess is too Low" respectively
+elif guess_num == comp_num:
+    print("You guessed just right, that's the number!")
+elif guess_num < 1 and guess_num > 20:
+    print("Sorry, your guess is way out of the game range.")
+else:
+    print("")
