@@ -22,6 +22,4 @@ elif guess_num < comp_num and guess_num > 1:
 elif guess_num == comp_num:
     print("You guessed just right, that's the number!")
 elif guess_num < 1 and guess_num > 20:
-    print("Sorry, your guess is way out of the game range.")
-else:
-    print("")
+    print("Sorry, your guess is out of the game range.")
