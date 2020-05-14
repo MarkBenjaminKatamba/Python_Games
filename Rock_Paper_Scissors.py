@@ -13,43 +13,53 @@
 # print ("Randomly selected item from list is - ", moview_item)
 
 import random
-
 Comp_Play = ['rock', 'paper', 'scissors']
-
 gameRounds = 0
 
 while gameRounds < 5:
     print("The game is Rock, Paper, Scissors; enter your guess: ")
+    
     My_guess = input()
-    print(random.choice(Comp_Play))
+    Comp_guess = random.choice(Comp_Play)
 
-    # gameRounds = gameRounds + 1
+    print(Comp_guess)
 
-    if My_guess == 'rock' and Comp_Play == 'scissors':
+    if My_guess == 'rock' and Comp_guess == 'scissors':
         print('Rock crushes scissors, you WIN!')
 
-    if My_guess == 'scissors' and Comp_Play == 'rock':
+    elif My_guess == 'scissors' and Comp_guess == 'rock':
         print('Rock crushes scissors, you LOSE!')
 
-    if My_guess == 'paper' and Comp_Play == 'rock':
+    elif My_guess == 'paper' and Comp_guess == 'rock':
         print('Paper covers rock, you WIN!')
-    
-    if My_guess == 'rock' and Comp_Play == 'paper':
+
+    elif My_guess == 'rock' and Comp_guess == 'paper':
         print('Paper covers rock, you LOSE!')
 
-    if My_guess == 'scissors' and Comp_Play == 'paper':
+    elif My_guess == 'scissors' and Comp_guess == 'paper':
         print('Scissor cuts paper, you WIN!')
-    
-    if My_guess == 'paper' and Comp_Play == 'scissors':
+
+    elif My_guess == 'paper' and Comp_guess == 'scissors':
         print('Scissor cuts paper, you LOSE!')
 
-    if My_guess == Comp_Play:
+    elif My_guess == Comp_guess:
         print('You tied! Replay to break the tie.')
-    
-    
 
-if gameRounds == 5:
-    print('Game Over, count the points.')
+    gameRounds = gameRounds + 1
+    if gameRounds == 5:
+        print('Game Over, count the points.')
+
+
+
+
+
+    
+    
+# if My_guess != 'rock' or My_guess != 'paper' or My_guess != 'scissors':
+#         print("That's out of the game, buddy! Stay focused.")
+
+# if gameRounds == 5:
+#     print('Game Over, count the points.')
 
 
 
