@@ -48,22 +48,3 @@ while gameRounds < 5:
     gameRounds = gameRounds + 1
     if gameRounds == 5:
         print('Game Over, count the points.')
-
-
-
-
-
-    
-    
-# if My_guess != 'rock' or My_guess != 'paper' or My_guess != 'scissors':
-#         print("That's out of the game, buddy! Stay focused.")
-
-# if gameRounds == 5:
-#     print('Game Over, count the points.')
-
-
-
-    # GameRounds = GameRounds + 1
-
-    # if GameRounds == 5:
-    #     print("")
