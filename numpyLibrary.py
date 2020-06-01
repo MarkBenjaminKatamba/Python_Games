@@ -20,3 +20,5 @@ a = np.array([1, 2, 3])         # Create a rank 1 array
 print(type(a))                  # prints "<Class 'numpy.ndarray'>"
 print(a.shape)                  # prints ("3,")
 print(a[0], a[1], a[2])         # prints "1 2 3"
+
+# This stuff finally worked
