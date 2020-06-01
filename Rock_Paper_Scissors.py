@@ -15,8 +15,6 @@
 import random
 Comp_Play = ['rock', 'paper', 'scissors']
 gameRounds = 0
-scores = 0
-scores1 = 0
 
 while gameRounds < 5:
     print("The game is Rock, Paper, Scissors; enter your guess: ")
@@ -27,41 +25,26 @@ while gameRounds < 5:
     print(Comp_guess)
 
     if My_guess == 'rock' and Comp_guess == 'scissors':
-        scores = scores + 5
-        print('Rock crushes scissors, you WIN! ' + str(scores) + ' points for you!')
+        print('Rock crushes scissors, you WIN!')
 
     elif My_guess == 'scissors' and Comp_guess == 'rock':
-        scores1 = scores1 + 5
         print('Rock crushes scissors, you LOSE!')
 
     elif My_guess == 'paper' and Comp_guess == 'rock':
-        scores = scores + 5
-        print('Paper covers rock, you WIN! ' + str(scores) + ' points for you!')
+        print('Paper covers rock, you WIN!')
 
     elif My_guess == 'rock' and Comp_guess == 'paper':
-        scores1 = scores1 + 5
         print('Paper covers rock, you LOSE!')
 
     elif My_guess == 'scissors' and Comp_guess == 'paper':
-        scores = scores + 5
-        print('Scissor cuts paper, you WIN! ' + str(scores) + ' points for you!')
+        print('Scissor cuts paper, you WIN!')
 
     elif My_guess == 'paper' and Comp_guess == 'scissors':
-        scores1 = scores1 + 5
         print('Scissor cuts paper, you LOSE!')
 
     elif My_guess == Comp_guess:
         print('You tied! Replay to break the tie.')
 
-    
-    
     gameRounds = gameRounds + 1
     if gameRounds == 5:
-        print('Game Over! Your total score is ' + str(scores) + ' points.')
-        print("And your opponent's total score is " + str(scores1) + '.')
-    
-        # if scores > scores1:
-        #     print('CONGRATULATIONS!!!')
-        # elif scores < scores1:
-        #     print("You lost this game, try again next time.")
-    
+        print('Game Over, count the points.')
