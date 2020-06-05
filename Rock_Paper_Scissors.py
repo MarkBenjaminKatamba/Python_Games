@@ -60,8 +60,10 @@ while gameRounds < 5:
         print('Game Over! Your total score is ' + str(scores) + ' points.')
         print("And your opponent's total score is " + str(scores1) + '.')
     
-        # if scores > scores1:
-        #     print('CONGRATULATIONS!!!')
-        # elif scores < scores1:
-        #     print("You lost this game, try again next time.")
+if scores > scores1:
+   print('The game is yours: CONGRATULATIONS!!!')
+elif scores < scores1:
+  print("You lost this game, try again next time.")
+elif scores == scores1:
+    print("The game was a tie. Play it again.")
     
