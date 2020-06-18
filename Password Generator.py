@@ -13,7 +13,21 @@ import string
 #         print("Password cannot be less than 6 characters!")
 #     break
 
-import functiontest #custom module to handle the password character limit
+# from functiontest import length
+# import functiontest #custom module to handle the password character limit
+
+# functiontest.pass_len
+
+
+
+def pass_len():
+    global length 
+    length = input("Enter the desired password length:\n")
+    if int(length) < 6:
+            print("Password cannot be less than 6 characters!!!")
+            return pass_len()
+pass_len()
+
 
 pass_num = input("How many digits in password:\n")
                  
@@ -34,7 +48,7 @@ def Password():
     
     pass_char = pass_num1 + pass_sym1 + pass_letters1
     
-    return ''.join(random.choice(pass_char) for i in range((functiontest.length)))
+    return ''.join(random.choice(pass_char) for i in range((int(length))))
 
 print("Your new password is ", Password())
 
