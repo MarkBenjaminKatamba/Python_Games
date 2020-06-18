@@ -38,15 +38,15 @@ pass_letters = input("How many letters in password:\n")
 def Password():
     
     pass_num1 = string.digits
-    print(''.join(random.choice(pass_num1) for i in range(int(pass_num))))
+    p_n = ''.join(random.choice(pass_num1) for i in range(int(pass_num)))
     
     pass_sym1 = string.punctuation
-    print(''.join(random.choice(pass_sym1) for i in range(int(pass_sym))))
+    p_s = ''.join(random.choice(pass_sym1) for i in range(int(pass_sym)))
     
     pass_letters1 = string.ascii_letters
-    print(''.join(random.choice(pass_letters1) for i in range(int(pass_letters))))
+    p_l = ''.join(random.choice(pass_letters1) for i in range(int(pass_letters)))
     
-    pass_char = pass_num1 + pass_sym1 + pass_letters1  
+    pass_char = p_n + p_s + p_l  
     print(pass_char)
     return ''.join((random.choice(pass_char) for i in range(int(length))))
 
