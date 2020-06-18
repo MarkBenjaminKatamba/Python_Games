@@ -36,14 +36,27 @@
 # ========================================================================
 
 
+# import random
+# import string
+
+# def randomStringwithDigitsAndSymbols(stringLength=10):
+#     password_characters = string.ascii_letters + string.digits + string.punctuation
+#     return ''.join(random.choice(password_characters) for i in range(stringLength))
+
+# print("Generating Random String password with letters, digits and special characters ")
+# print ("First Random String ", randomStringwithDigitsAndSymbols() )
+# print ("Second Random String", randomStringwithDigitsAndSymbols(10) )
+# print ("Third Random String", randomStringwithDigitsAndSymbols(10) )
+
+
+
 import random
 import string
 
-def randomStringwithDigitsAndSymbols(stringLength=10):
-    password_characters = string.ascii_letters + string.digits + string.punctuation
-    return ''.join(random.choice(password_characters) for i in range(stringLength))
+def randString(length=5):
+    # put your letters in the following string
+    your_letters='abcdefghi'
+    return ''.join((random.choice(your_letters) for i in range(length)))
 
-print("Generating Random String password with letters, digits and special characters ")
-print ("First Random String ", randomStringwithDigitsAndSymbols() )
-print ("Second Random String", randomStringwithDigitsAndSymbols(10) )
-print ("Third Random String", randomStringwithDigitsAndSymbols(10) )
+print("Random String with specific letters ", randString())
+print("Random String with specific letters ", randString(5))
