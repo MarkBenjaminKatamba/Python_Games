@@ -8,6 +8,8 @@ import random
 import string
 
 pass_len = input("Enter the desired password length:\n")
+for pass_len < 6:
+    print("Password cannot be less than 6 characters!")
 
 pass_num = input("How many digits in password:\n")
                  
@@ -32,5 +34,7 @@ def Password():
 
 print("Your new password is ", Password())
 
-# letters = string.punctuation
-# print ( ''.join(random.choice(letters) for i in range(10)) )
+# Helpful References: 
+#   1. shorturl.at/eBXYZ
+#   2. shorturl.at/bzS29
+#   3. shorturl.at/bmVX5
