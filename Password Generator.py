@@ -38,22 +38,22 @@ pass_letters = input("How many letters in password:\n")
 def Password():
     
     pass_num1 = string.digits
-    ''.join(random.choice(pass_num1) for i in range(int(pass_num)))
+    print(''.join(random.choice(pass_num1) for i in range(int(pass_num))))
     
     pass_sym1 = string.punctuation
-    ''.join(random.choice(pass_sym1) for i in range(int(pass_sym)))
+    print(''.join(random.choice(pass_sym1) for i in range(int(pass_sym))))
     
     pass_letters1 = string.ascii_letters
-    ''.join(random.choice(pass_letters1) for i in range(int(pass_letters)))
+    print(''.join(random.choice(pass_letters1) for i in range(int(pass_letters))))
     
-    pass_char = pass_num1 + pass_sym1 + pass_letters1
-    
-    return ''.join(random.choice(pass_char) for i in range((int(length))))
+    pass_char = pass_num1 + pass_sym1 + pass_letters1  
+    print(pass_char)
+    return ''.join((random.choice(pass_char) for i in range(int(length))))
 
 print("Your new password is ", Password())
 
 # Helpful References: 
-#   1. shorturl.at/eBXYZ
-#   2. shorturl.at/bzS29
+#   1. https://pynative.com/python-generate-random-string/
+#   2. https://www.educative.io/edpresso/how-to-generate-a-random-string-in-python?aid=5082902844932096&utm_source=google&utm_medium=cpc&utm_campaign=edpresso-dynamic&gclid=EAIaIQobChMI9bjDysOr6QIVRe7tCh2V1wNxEAAYASAAEgJVnfD_BwE
 #   3. shorturl.at/bmVX5
 #   4. https://www.programiz.com/python-programming/modules
