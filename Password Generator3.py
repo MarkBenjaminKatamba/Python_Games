@@ -35,9 +35,10 @@ def pass_numx():
     pass_num = input("How many digits in password:\n")
     if int(pass_num) > int(length):
         print("Cannot be greater than overall password length!")
+        return pass_numx()
     elif int(pass_num) == int(length):
         print("Cannot be equal to overall password length!")
-    return pass_numx()
+        return pass_numx()
 pass_numx()
                  
 
@@ -47,6 +48,7 @@ def pass_symx():
     pass_sym = input("How many symbols in password:\n")
     if int(pass_sym) > int(length):
         print("Cannot be greater than overall password length!")
+        return pass_symx()
     elif int(pass_sym) == int(length):
         print("Cannot be equal to overall password length!")
         return pass_symx()
@@ -58,7 +60,8 @@ def pass_lettersx():
     global pass_letters 
     pass_letters = input("How many letters in password:\n")
     if int(pass_letters) > int(length):
-        print("Cannot be greater than overall password length!") 
+        print("Cannot be greater than overall password length!")
+        return pass_lettersx()
     elif int(pass_letters) == int(length):
         print("Cannot be equal to overall password length!")
         return pass_lettersx()
