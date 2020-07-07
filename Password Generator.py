@@ -47,7 +47,7 @@ def Password():
     p_l = ''.join(random.choice(pass_letters1) for i in range(int(pass_letters)))
     
     pass_char = p_n + p_s + p_l  
-    print(pass_char)
+#    print(pass_char)
     return ''.join((random.choice(pass_char) for i in range(int(length))))
 # Note that some characters will repeat themselves, since we used random.choice. To achieve a password with non-repeating characters, we'd use random.sample, though this is not recommended in real life
 print("Your new password is ", Password())
