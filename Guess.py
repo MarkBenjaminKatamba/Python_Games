@@ -23,8 +23,7 @@ while number_of_guesses < 5:
         break
 
 if guess == number:
-    print('You guessed the number in ' + str(number_of_guesses) + ' tries!')
-
+    print('Congratulations, You guessed the number in ' + str(number_of_guesses) + ' tries!!!')
 else:
     print('You did not guess the number. The number was ' + str(number))
 
