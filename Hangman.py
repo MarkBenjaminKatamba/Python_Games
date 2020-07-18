@@ -31,16 +31,19 @@ def GamePlay(secretWord):                                               # Displa
     guessedLetters = []                                                 # This list will hold the letters the user guesses
     guessedWords = []                                                    # This will hold the words the user guesses
     trials = 6
-    print("Let's play Hangman!")
+    print("Welcome to the Hangman Game!")
+    print("It consists of names of African countries, so you'll be guessing which country name you think is represented by the dashes below.")
+    print("\n")
     print(wordCompletion)                                               # Printing the initial state of the game with all underscores
     print("\n")
     while not guessed and trials > 0:                                   # So we need a while loop that will run until either the word is guessed or the user runs out of guesses.
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input("Please guess a letter or word (Hint: it's an African country): ").upper()
         if len(guess) == 1 and guess.isalpha():                         # Guessing a letter would mean that guess has a length of 1, and contains only characters from the alphabet
             if guess in guessedLetters:
                 print("You already guessed the letter, ", guess)
             elif guess not in secretWord:
                 print(guess, "is not in the word.")
+                print("\n")
                 trials -= 1
                 guessedLetters.append(guess)
             else:
@@ -85,3 +88,8 @@ def main():
     while input("Play Again? (Y/N)").upper() == "Y":
         secretWord = guess_word()
         GamePlay(secretWord)
+
+
+if __name__ == "__main__":
+    main()
+#    pass
