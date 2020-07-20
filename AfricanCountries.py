@@ -36,7 +36,7 @@ Africa = [
     'Sierra Leone',
     'Central African Republic',
     'Eritrea',
-    'Republic of the Congo',
+    'Congo Brazzaville',
     'Liberia',
     'Mauritania',
     'Gabon',
