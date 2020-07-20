@@ -10,11 +10,11 @@ Useful Resource Links:
     1. https://thewordsearch.com/hangman
     2. https://en.wikipedia.org/wiki/Hangman_(game)
     3. a) https://www.downloadexcelfiles.com/wo_en/download-excel-file-list-african-countries-dependent-territories#.XvC3yGgzbDc 
-       b) en.wikipedia.org/wiki/List_of_African_countries_by_population							
+       b) en.wikipedia.org/wiki/List_of_African_countries_by_population
+    4. https://youtu.be/m4nEnsavl6w							
 '''
 
 import random
-import string
 from AfricanCountries import Africa
 
 def guess_word():
