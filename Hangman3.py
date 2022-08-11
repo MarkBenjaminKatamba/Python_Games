@@ -11,10 +11,13 @@ hiddenWord = (random.choice(Africa)).upper()
 hidden = "_ " * len(hiddenWord)
 guessedLetters = []
 guessedWords = []
+attempts = 6
+
 
 
 
 # Loop until either the player wins or loses.
+isGameOver = False
 
     # Display the current board,guessed letters/word, and tries remaining.
 
