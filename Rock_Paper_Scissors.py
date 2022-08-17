@@ -15,14 +15,16 @@
 # print ("Randomly selected item from list is - ", moview_item)
 
 import random
+
 compPlay = ['rock', 'paper', 'scissors']
+
 gameRounds = 0
 myScore = 0
 compScore = 0
 
 while gameRounds < 5:
     print("The game is Rock, Paper, Scissors; enter your guess: ")
-    
+     
     myGuess = input()
     compGuess = random.choice(compPlay)
     print("Opponent's guess: " + compGuess)
@@ -39,22 +41,36 @@ while gameRounds < 5:
     elif myGuess == 'scissors' and compGuess == 'rock':
         compScore += 5
         print('Rock crushes scissors, you LOSE!')
+        print('\n')
 
     elif myGuess == 'paper' and compGuess == 'rock':
         myScore += 5
         print('Paper covers rock, you WIN! ' + str(myScore) + ' points for you!')
 
+    elif myGuess == 'paper' and compGuess == 'rock':
+        myScore += 5
+        print('Paper covers rock, you WIN! ' + str(myScore) + ' points for you!')
+        print('\n')
+
     elif myGuess == 'rock' and compGuess == 'paper':
         compScore += 5
         print('Paper covers rock, you LOSE!')
+        print('\n')
+
 
     elif myGuess == 'scissors' and compGuess == 'paper':
         myScore += 5
         print('Scissor cuts paper, you WIN! ' + str(myScore) + ' points for you!')
 
+    elif myGuess == 'scissors' and compGuess == 'paper':
+        myScore += 5
+        print('Scissor cuts paper, you WIN! ' + str(myScore) + ' points for you!')
+        print('\n')
+
     elif myGuess == 'paper' and compGuess == 'scissors':
         compScore += 5
         print('Scissor cuts paper, you LOSE!')
+        print('\n')
 
     elif myGuess == compGuess:
         print('You tied! Replay to break the tie.')
@@ -64,6 +80,14 @@ while gameRounds < 5:
     if gameRounds == 5:
         print('Game Over! Your total score is ' + str(myScore) + ' points.')
         print("And your opponent's total score is " + str(compScore) + '.')
+        print('\n')
+        
+    
+gameRounds += 1
+if gameRounds == 5:
+        print('Game Over! Your total score is ' + str(myScore) + ' points.')
+        print("And your opponent's total score is " + str(compScore) + '.')
+        print('\n')
     
 if myScore > compScore:
    print('The game is yours: CONGRATULATIONS!!!')
