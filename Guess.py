@@ -13,14 +13,18 @@ while number_of_guesses < 5:
 
     number_of_guesses = number_of_guesses + 1
 
-    if guess < number:
+    if guess < 1 or guess > 25:
+        print('Sorry, your guess is out of scope!')
+
+    elif guess < number:
         print('Your guess is too low')
 
-    if guess > number:
+    elif guess > number:
         print('Your guess is too high')
 
-    if guess == number:
+    elif guess == number:
         break
+
 
 if guess == number:
     print('Congratulations, You guessed the number in ' + str(number_of_guesses) + ' tries!!!')
