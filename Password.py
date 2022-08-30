@@ -1,8 +1,7 @@
 # # Working with While loops (Resource: https://www.digitalocean.com/community/tutorials/how-to-construct-while-loops-in-python-3)
 
 # password = ''
-
-# while password != 'password':
+# while password != 'Naggie':
 #     print('What is the password?')
 #     password = input()
     
