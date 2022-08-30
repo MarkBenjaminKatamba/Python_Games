@@ -26,33 +26,32 @@ while gameRounds < 5:
 
     if My_guess == 'rock' and Comp_guess == 'scissors':
         print(Comp_guess)
-        print('Rock crushes scissors, you WIN.')
         my_score += 5
-        print(f'{my_score} points for that! \n')
+        print(f'Rock crashes scissors, you WIN {my_score} points for that! \n')
 
     elif My_guess == 'scissors' and Comp_guess == 'rock':
         print(Comp_guess)
-        print('Rock crushes scissors, you LOSE! \n')
+        print('Rock crashes scissors, you lose! \n')
         comp_score += 5
 
     elif My_guess == 'paper' and Comp_guess == 'rock':
         print(Comp_guess)
-        print('Paper covers rock, you WIN!')
-        print(f'Now you have {my_score + 5} points! \n')
+        my_score += 5
+        print(f'Paper covers rock, you WIN! Now you have {my_score} points! \n')
 
     elif My_guess == 'rock' and Comp_guess == 'paper':
         print(Comp_guess)
-        print('Paper covers rock, you LOSE! \n')
+        print('Paper covers rock, you lose! \n')
         comp_score += 5
 
     elif My_guess == 'scissors' and Comp_guess == 'paper':
         print(Comp_guess)
-        print('Scissor cuts paper, you WIN!')
-        print(f'Now you have {my_score + 5} points! \n')
+        my_score += 5
+        print(f'Scissor cuts paper, you WIN! You now have {my_score} points! \n')
 
     elif My_guess == 'paper' and Comp_guess == 'scissors':
         print(Comp_guess)
-        print('Scissor cuts paper, you LOSE! \n')
+        print('Scissor cuts paper, you lose! \n')
         comp_score += 5
 
     elif My_guess == Comp_guess:
@@ -65,8 +64,8 @@ while gameRounds < 5:
 
 
 if gameRounds == 5:
-    print(f'Game Over! Your total score is {my_score} points.')
-    print(f"And Lenovo's total score is {comp_score}. points\n")
+    print(f'Game Over! \nYour total score is {my_score} points.')
+    print(f"And Lenovo's total score is {comp_score} points \n")
     
     if my_score > comp_score:
         print("CONGRATULATIONS! This game is yours.")
