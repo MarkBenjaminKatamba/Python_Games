@@ -70,6 +70,6 @@ if gameRounds == 5:
     if my_score > comp_score:
         print("CONGRATULATIONS! This game is yours.")
     if my_score < comp_score:
-        print("Sorry, you lost this game. Want to try again?")
+        print("Sorry, you lost this game. Wanna try again?")
     if my_score == comp_score:
         print(f"You both scored {my_score} points. Wanna try again to break the tie?")
