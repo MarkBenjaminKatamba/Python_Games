@@ -1,79 +1,61 @@
-# Make a rock-paper-scissors game where it is the player vs the computer.
-# The computer's answer will be randomly generated, while the program will
-# ask the user for their input.
-# This project will better your understanding of while loops and if statements.
-
-# How to use random.choice() function to randomly select things from a list
-# (Resource: https://pynative.com/python-random-choice/)
-# import random
-# movie_list = ['The Godfather', 'The Wizard of Oz', 'Citizen Kane', 'The Shawshank Redemption', 'Pulp Fiction']
-
-# moview_item = random.choice(movie_list)
-# print ("Randomly selected item from list is - ", moview_item)
-
-# moview_item = random.choice(movie_list)
-# print ("Randomly selected item from list is - ", moview_item)
 
 import random
 
-compPlay = ['rock', 'Rock', 'paper', 'Paper', 'scissors', 'Scissors']
+compPlay = ['rock', 'Rock', 'ROCK', 'paper', 'Paper', 'PAPER', 'scissors', 'Scissors', 'SCISSORS']
 gameRounds = 0
 myScore = 0
 compScore = 0
 
 while gameRounds < 5:
     print("The game is Rock, Paper, Scissors; enter your guess: ")
-    myGuess = input()
+    myGuess = str(input())
     compGuess = random.choice(compPlay)
-    print("Opponent's guess: " + compGuess)
 
-    # if myGuess is not compPlay:
-    #    print("Wrong input. Please enter either 'rock', 'paper', or 'scissors'")
-    #     # return myGuess
-
-    if myGuess == 'rock' or 'Rock' and compGuess == 'scissors' or 'Scissors':
+    if myGuess == ('rock' or 'Rock' or 'ROCK') and compGuess == ('scissors' or 'Scissors' or 'SCISSORS'):
+        print(compGuess)
         myScore += 5
-        print('Rock crushes scissors, you WIN! ' + str(myScore) + ' points for you!')
-        print('\n')
+        print(f'Rock crushes scissors, you WIN {myScore} points for that! \n')
 
-    elif myGuess == 'scissors' or 'Scissors' and compGuess == 'rock' or 'Rock':
+    elif myGuess == ('scissors' or 'Scissors' or 'SCISSORS') and compGuess == ('rock' or 'Rock' or 'ROCK'):
+        print(compGuess)
         compScore += 5
-        print('Rock crushes scissors, you LOSE!')
-        print('\n')
+        print('Rock crushes scissors, you lose! \n')
 
-    elif myGuess == 'paper' or 'Paper' and compGuess == 'rock' or 'Rock':
+    elif myGuess == ('paper' or 'Paper' or 'PAPER') and compGuess == ('rock' or 'Rock' or 'ROCK'):
+        print(compGuess)
         myScore += 5
-        print('Paper covers rock, you WIN! ' + str(myScore) + ' points for you!')
-        print('\n')
+        print(f'Paper covers rock, you WIN! {myScore} points for that! \n')
 
-    elif myGuess == 'rock' or 'Rock' and compGuess == 'paper' or 'Paper':
+    elif myGuess == ('rock' or 'Rock' or 'ROCK') and compGuess == ('paper' or 'Paper' or 'PAPER'):
+        print(compGuess)
         compScore += 5
-        print('Paper covers rock, you LOSE!')
-        print('\n')
+        print('Paper covers rock, you lose! \n')
 
-    elif myGuess == 'scissors' or 'Scissors' and compGuess == 'paper' or 'Paper':
+    elif myGuess == ('scissors' or 'Scissors' or 'SCISSORS') and compGuess == ('paper' or 'Paper' or 'PAPER'):
+        print(compGuess)
         myScore += 5
-        print('Scissor cuts paper, you WIN! ' + str(myScore) + ' points for you!')
-        print('\n')
+        print(f'Scissor cuts paper, you WIN! {myScore} points for that! \n')
 
-    elif myGuess == 'paper' or 'Paper' and compGuess == 'scissors' or 'Scissors':
+    elif myGuess == ('paper' or 'Paper' or 'PAPER') and compGuess == ('scissors' or 'Scissors' or 'SCISSORS'):
+        print(compGuess)
         compScore += 5
-        print('Scissor cuts paper, you LOSE!')
-        print('\n')
+        print('Scissor cuts paper, you lose! \n')
 
     elif myGuess == compGuess:
-        print('You tied! Replay to break the tie.')
-        print('\n')
+        print(compGuess)
+        print('You tied on this one! \n')
 
-gameRounds += 1
+    elif myGuess not in compPlay:
+        print('Invalid Input!')
+
+
 if gameRounds == 5:
-    print('Game Over! Your total score is ' + str(myScore) + ' points.')
-    print("And your opponent's total score is " + str(compScore) + '.')
-    print('\n')
+    print(f'Game Over! \n Your total score is {myScore} points.')
+    print(f"And Lenovo's total score is {compScore} points\n")
 
-if myScore > compScore:
-    print('The game is yours: CONGRATULATIONS!!!')
-elif myScore < compScore:
-    print("You lost this game, try again next time.")
-elif myScore == compScore:
-    print("The game was a tie. Wanna give it another try?")
+    if myScore > compScore:
+        print("CONGRATULATIONS! This game is yours.")
+    if myScore < compScore:
+        print("Sorry, you lost this game. Wanna try again?")
+    if myScore == compScore:
+        print(f"You both scored {myScore} points. Wanna try again?")
