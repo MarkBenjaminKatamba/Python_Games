@@ -3,13 +3,6 @@
 # ask the user for their input. 
 # This project will better your understanding of while loops and if statements.
 
-# How to use random.choice() function to randomly select things from a list
-# (Resource: https://pynative.com/python-random-choice/)
-# import random
-# movie_list = ['The Godfather', 'The Wizard of Oz', 'Citizen Kane', 'The Shawshank Redemption', 'Pulp Fiction']
-# moview_item = random.choice(movie_list)
-# print ("Randomly selected item from list is - ", moview_item)
-
 import random
 
 Comp_Play = ['rock', 'paper', 'scissors']
@@ -17,8 +10,10 @@ gameRounds = 0
 my_score = 0
 comp_score = 0
 
+print("Enter your firstname:")
+my_name = input()
 while gameRounds < 5:
-    print("The game is Rock, Paper, Scissors; enter your guess below: ")
+    print("The game is Rock, Paper, Scissors; what's your guess: ")
     My_guess = input()
     Comp_guess = random.choice(Comp_Play)
 
@@ -68,8 +63,8 @@ if gameRounds == 5:
     print(f"And Lenovo's total score is {comp_score} points \n")
     
     if my_score > comp_score:
-        print("CONGRATULATIONS! This game is yours.")
+        print(f"CONGRATULATIONS, {my_name}! This game is yours.")
     if my_score < comp_score:
-        print("Sorry, you lost this game. Wanna try again?")
+        print(f"Sorry, {my_name}, you've lost this game. Wanna try again?")
     if my_score == comp_score:
         print(f"You both scored {my_score} points. Wanna try again to break the tie?")
