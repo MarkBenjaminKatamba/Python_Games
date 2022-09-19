@@ -10,7 +10,7 @@ gameRounds = 0
 my_score = 0
 comp_score = 0
 
-print("Enter your firstname:")
+print("Enter your nickname:")
 my_name = input()
 while gameRounds < 5:
     print("The game is Rock, Paper, Scissors; what's your guess: ")
@@ -60,10 +60,10 @@ while gameRounds < 5:
 
 if gameRounds == 5:
     print(f'Game Over! \nYour total score is {my_score} points.')
-    print(f"And Lenovo's total score is {comp_score} points \n")
+    print(f"Lenovo's total score is {comp_score} points \n")
     
     if my_score > comp_score:
-        print(f"CONGRATULATIONS, {my_name}! This game is yours.")
+        print(f"CONGRATULATIONS, {my_name}. This game is yours!")
     if my_score < comp_score:
         print(f"Sorry, {my_name}, you've lost this game. Wanna try again?")
     if my_score == comp_score:
