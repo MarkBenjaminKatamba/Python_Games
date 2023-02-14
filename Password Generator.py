@@ -23,7 +23,7 @@ import string
 def pass_len():
     global length 
     length = input("Enter the desired password length:\n")
-    if int(length) < 6:
+    if int(length) < 8:
             print("Password cannot be less than 6 characters!!!")
             return pass_len()
 pass_len()
