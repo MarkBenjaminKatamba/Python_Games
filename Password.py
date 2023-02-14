@@ -4,7 +4,7 @@
 # while password != 'Naggie':
 #     print('What is the password?')
 #     password = input()
-    
+
 # print('Yes, the password is ' + password + '. You may enter.')
 
 # # Random string generator: https://www.educative.io/edpresso/how-to-generate-a-random-string-in-python?aid=5082902844932096&utm_source=google&utm_medium=cpc&utm_campaign=edpresso-dynamic&gclid=EAIaIQobChMI9bjDysOr6QIVRe7tCh2V1wNxEAAYASAAEgJVnfD_BwE
@@ -48,14 +48,15 @@
 # print ("Third Random String", randomStringwithDigitsAndSymbols(10) )
 
 
-
 import random
 import string
 
-def randString(length=5):
+
+def randString(length=15):
     # put your letters in the following string
-    your_letters='abcdefghi'
+    your_letters = '#@?1a4b7#c0_P@defVghiT%'
     return ''.join((random.choice(your_letters) for i in range(length)))
 
-print("Random String with specific letters ", randString())
-print("Random String with specific letters ", randString(5))
+
+# print("Random String with specific letters ", randString())
+print("Random String with specific letters ", randString(15))
